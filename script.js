@@ -114,10 +114,10 @@ form.addEventListener('submit', function(event) {
         });
         document.getElementById("text").value = obj.Emailtitle;
         document.getElementById("passwords").value = obj.password;
-        updatePasswordCount();//decreases password count whenn u clickon edit buuton  
+        updatePasswordCount();//decreases password count when you clickon edit buuton  
         
       });
-      updatePasswordCount();//update count initially when u add the items to userlist
+      updatePasswordCount();//update count initially when you add the items to userlist
 };
 
 
