@@ -44,7 +44,7 @@ form.addEventListener('submit', function(event) {
     localStorage.setItem(Emailtitle, newobj); // Use unique key for each expense
 
     axios
-      .post("https://crudcrud.com/api/51792e9a84534c1383208db07234d701/passdata",obj)
+      .post("https://crudcrud.com/api/2c25101a85d645d6b40e1472196c0036/passdata",obj)
       .then((response) => displayUserOnScreen(response.data))
       .catch((error) => console.log(error));
   
@@ -56,7 +56,7 @@ form.addEventListener('submit', function(event) {
   
   window.addEventListener("DOMContentLoaded", () => {
     axios
-      .get("https://crudcrud.com/api/51792e9a84534c1383208db07234d701/passdata")
+      .get("https://crudcrud.com/api/2c25101a85d645d6b40e1472196c0036/passdata")
       .then((res) => {
         console.log(res);
         for (var i = 0; i < res.data.length; i++) {
@@ -93,7 +93,7 @@ form.addEventListener('submit', function(event) {
       userList.removeChild(userItem);//removes useritem from userlist when delete button is clicked
       updatePasswordCount();//upadte password count as we are deleting item from userlist 
       axios
-        .delete(`https://crudcrud.com/api/51792e9a84534c1383208db07234d701/passdata/${obj._id}`)
+        .delete(`https://crudcrud.com/api/2c25101a85d645d6b40e1472196c0036/passdata/${obj._id}`)
         .then((res) => {
           console.log(res);
         })
@@ -105,7 +105,7 @@ form.addEventListener('submit', function(event) {
     editBtn.addEventListener("click", function (event) {
         userList.removeChild(userItem);
        axios
-        .delete(`https://crudcrud.com/api/51792e9a84534c1383208db07234d701/passdata/${obj._id}`)
+        .delete(`https://crudcrud.com/api/2c25101a85d645d6b40e1472196c0036/passdata/${obj._id}`)
         .then((res) => {
           console.log(res);
         })
